@@ -1,0 +1,93 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 420px;
+    border: 1px solid black;
+    align-items: center;
+    margin: 0; /* Remove auto margin to manually position the form */
+    position: absolute;
+    top: 150px; /* Use top property to position it vertically */
+    right: 100px; /* Add space from the right edge */
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+}
+.rem {
+    color:white;
+}
+.form-check{
+    padding-left: 50px;
+}
+
+.box{
+    padding: 12px;
+    margin: 20px;
+    width:65%;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+}
+
+#submit{
+    padding: 10px 20px;
+    margin-top: 50px;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+    color: green;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+::placeholder{
+    color: white;
+    opacity: 0.7;
+}
+
+.Sunrise{
+  
+    font-size: 20px;
+    color: white;
+}
+.wd{
+    font-size: 15px;
+    color: white;
+}
+.fn{
+    font-size: 15px;
+    color: white;
+}
+.header {
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust spacing as needed */
+}
+.logo {
+    width: 50px; /* Adjust the width as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust space between logo and text */
+}
+.login{
+    background-color:#f7dff3;
+    padding-top: 10px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 110px;
+    padding-right: 110px;
+}
+.forgot{
+    color:white;
+    padding-left: 150px;
+    padding-top: 20px;
+}

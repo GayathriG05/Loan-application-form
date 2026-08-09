@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            background: url('Loan-application-form-1.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .form {
+            display: flex;
+            flex-direction: column;
+            height: 450px;
+            width: 420px;
+            border: 1px solid black;
+            align-items: center;
+            margin: 0;
+            position: absolute;
+            top: 150px;
+            right: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -5px -5px rgba(0, 0, 0, 0.5);
+            border-radius: 25px;
+        }
+        .rem {
+            color: white;
+        }
+        .form-check {
+            padding-left: 50px;
+        }
+        .box {
+            padding: 12px;
+            margin: 20px;
+            width: 65%;
+            border: none;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            font-size: 1rem;
+            border-radius: 15px;
+            padding-left: 20px;
+        }
+        #submit {
+            padding: 10px 20px;
+            margin-top: 50px;
+            width: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            box-shadow: inset -3px -3px rgba(0, 0, 0, 0.5);
+            color: green;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+        }
+        #submit:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+        ::placeholder {
+            color: white;
+            opacity: 0.7;
+        }
+        .Sunrise {
+            font-size: 20px;
+            font-weight: bolder;
+            line-height: 26px;
+            color: white;
+        }
+        .wd {
+            font-family: 'Agency FB', sans-serif;
+            font-size: 17px;
+            line-height: 15px;
+            color: rgb(219, 119, 13);
+            font-weight: bold;
+        }
+        .fn {
+            font-size: 15px;
+            line-height: 25px;
+            color: white;
+        }
+        .header {
+            padding-top: 30px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 70px; 
+            height: 80px;
+            margin-right: 10px; 
+        }
+        .login {
+            background-color: #ff8503;
+            padding-top: 10px;
+            margin-top: 20px;
+            padding-bottom: 10px;
+            padding-left: 110px;
+            padding-right: 110px;
+            border-radius: 15px;
+        }
+        .forgot {
+            color: white;
+            padding-left: 150px;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+   <form id="loginForm" class="form">
+        <div class="header">
+            <img src="inno fin.png" alt="Logo" class="logo">
+            <div class="text">
+                <h><span class="Sunrise">S U N R I S E</span>
+                <br><span class="wd">WOMEN DEVELOPMENT</span>
+                <br><span class="fn">F O U N D A T I O N</span></h>
+            </div>
+        </div>
+        <input type="email" name="email" class="box" placeholder="Username" required>
+        <input type="password" name="password" class="box" placeholder="Password" required>
+        <input type="submit" class="login" value="LOGIN">
+        <div class="input-group mb-5">
+            <div class="forgot">
+                <small><a href="#">Forgot Password?</a></small>
+            </div>
+        </div>
+   </form>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            window.location.href = 'riugh.html'; // Redirect to the next page
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+p{
+    font-family: Roboto;
+}
+.H1
+{
+font-weight: BOLD;
+FONT-SIZE: 18PX;
+margin-bottom: 0px;
+}
+.H2{
+margin-top: 3px;
+color:gray;
+}
+.H3{
+width: 300px;
+}
+.GS{
+background-color:rgb(46, 175, 46);
+color: white;
+font-size: 15px;
+border-radius: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+padding-left: 20px;
+padding-right: 20px;
+}

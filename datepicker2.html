@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-step Loan Application Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    .form-section {
+      display: none;
+    }
+    .form-section.active {
+      display: block;
+    }
+	.navbar {
+            background-color: #d0f0c0 ;
+        }
+        .navbar-brand {
+            color: white; /* Optional: Change text color for better contrast */
+        }
+        .form-group {
+            margin-left: auto; /* Align to the right of the navbar */
+        }
+        .form-check-inline {
+            margin-left: 15px;
+        }
+        .navbar-brand, .form-check-label {
+            color: black; /* Optional: Change text color for better contrast */
+        }
+        .loan{
+            font-size: 20px;
+        }
+    .nav .nav-item button.active {
+        background-color: transparent;
+        color: var(--bs-danger) !important;
+      }
+      .nav .nav-item button.active::after {
+        content: "";
+        border-right: 4px solid var(--bs-danger);
+        height: 100%;
+        position: absolute;
+        right: -1px;
+        top: 0;
+        border-radius: 5px 0 0 5px;
+      }
+  
+#a1{
+      color:black;
+      background-color:green;
+      margin:20px;
+      padding:10px;}
+      #a2{
+      color:black;
+      background-color:green;
+      margin:20px;
+      padding:10px;}
+
+    
+      .text{
+        background-color: rgb(181, 181, 181);
+        border:grey;
+        border-style:dotted;
+        margin-right: 50px;
+        margin-left: 50px;
+       padding-top: 30px;
+       padding-bottom: 30px; 
+         }
+
+  </style>
+</head>
+<body>
+
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12 d-flex align-items-center">
+                <nav class="navbar navbar-expand-lg w-100">
+                    <a class="navbar-brand" href="#">Sunrise
+                        <br>women development
+                        <br>foundation
+                    </a>
+                    <div class="form-group d-flex align-items-center">
+                        <label class="mr-3"><SPAN class="loan">LOAN AMOUNT</SPAN></label>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1">
+                            <label class="form-check-label" for="radio1">10,000</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+                            <label class="form-check-label" for="radio2">20,000</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="radio3" name="optradio">
+                            <label class="form-check-label">30,000</label>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+ <div class="container">
+		
+			 <div class="form-group">    
+	<div class="col-lg-12">
+	<div class="container">
+    <form id="loan-application-form">
+		<div class="form-section active" id="section1">
+			<p>LOAN APPLICATION FORM</p>
+					   <div class="row pt-2">
+						 <div class="col-lg-2">
+						 <label>Customer's Title</label>
+					   </div>
+					   <div class="col-lg-4">
+				 <div class="form-check form-check-inline ">
+				   <input  type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >
+				   <label class="form-check-label" for="radio1">Mr.</label>
+				 </div>
+				 <div class="form-check form-check-inline ">
+				   <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+				   <label class="form-check-label" for="radio2">Mrs.</label>
+				 </div>
+				 <div class="form-check form-check-inline">
+				   <input  type="radio" class="form-check-input" id="radio3" name="optradio" >
+				   <label class="form-check-label">Ms.</label>
+				 </div>
+				 <div class="form-check form-check-inline">
+				   <input  type="radio" class="form-check-input" id="radio4" name="optradio" >
+				   <label class="form-check-label">Dr.</label>
+				 </div>
+				 <div class="form-check form-check-inline">
+				   <input  type="radio" class="form-check-input" id="radio5" name="optradio" >
+				   <label class="form-check-label">M/s.</label>
+				 
+				  </div>
+				  </div>
+				
+			 
+			 
+			 
+			   <div class="col-lg-6">
+				 <div class="input-group">
+					 <span class="input-group-text" id="basic-addon1">Name &nbsp;<i class="fa fa-user"></i></span>
+				  <input type="text" class="form-control" id="Name" aria-label="Name">
+	 
+			  </div>
+			   </div>
+			 </div>
+			 
+		 
+			 
+				 
+			 
+				 <div class="row pt-3">
+					 <div class="col-lg-6">
+						 <div class="input-group">
+							 <span class="input-group-text" id="basic-addon1">Mobile Number &nbsp;<i class="fa fa-phone"></i></span>
+						  <input type="number" class="form-control" id="mobilenumber" aria-label="Mobilenumber">
+			 </div>
+					  
+				  </div>
+				  
+				  <div class="col-lg-6">
+				 
+					 <div class="input-group">
+						 <span class="input-group-text" id="basic-addon1">Alternative No.&nbsp; <i class="fa fa-phone"></i></span>
+					  <input type="number" class="form-control" id="alternativenumber" aria-label="Alternative No.">
+		 
+					 </div>
+				</div>
+				 </div>
+				 
+			 
+				 
+					 
+			   <div class="row pt-3">
+				 <div class="col-lg-2">
+				 <label>Gender</label>
+			   </div>
+			 
+			   <div class="col-lg-6">
+			 <div class="form-check form-check-inline">
+			 <input  type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >
+			 <label class="form-check-label" for="radio1">Male</label>
+			 </div>
+			 <div class="form-check form-check-inline ">
+			 <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+			 <label class="form-check-label" for="radio2">Female</label>
+			 </div>
+			 <div class="form-check form-check-inline">
+			 <input  type="radio" class="form-check-input" id="radio3" name="optradio" >
+			 <label class="form-check-label">Third Gender</label>
+			 </div>
+			 
+			 </div>
+			 
+			 
+		 
+			 
+				 <div class="row pt-3">
+				 <div class="col-lg-12">
+					 <div class="input-group">
+						 <span class="input-group-text" id="basic-addon1">Email Id&nbsp;<i class="fa fa-envelope-o"></i></span>
+						 <input type="email" class="form-control" id="EmailId" aria-label="Email Id">
+					 </div>            
+				 </div>
+				   </div>
+			 
+			 
+				   <div class="row pt-3">
+					
+					 <div class="col-lg-12">
+						 <label for="date">Date of Birth</label>
+				  <input type="date" id="date" name="date" class="form-control">
+					 
+				 </div> 
+				 </div>
+		   <div class="container">
+				 
+					 
+			   <div class="row pt-3">
+				 <div class="col-lg-2">
+				 <label>Status</label>
+			   </div>
+			   <div class="col-lg-8">
+			 <div class="form-check form-check-inline">
+			 <input  type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >
+			 <label class="form-check-label" for="radio1">Married</label>
+			 </div>
+			 <div class="form-check form-check-inline ">
+			 <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+			 <label class="form-check-label" for="radio2">Unmarried</label>
+			 </div>
+			 <div class="form-check form-check-inline">
+			 <input  type="radio" class="form-check-input" id="radio3" name="optradio" >
+			 <label class="form-check-label">Divorced</label>
+			 </div>
+			 <div class="form-check form-check-inline">
+			 <input  type="radio" class="form-check-input" id="radio4" name="optradio" >
+			 <label class="form-check-label">Separated</label>
+			 </div>
+			 <div class="form-check form-check-inline">
+			 <input  type="radio" class="form-check-input" id="radio5" name="optradio" >
+			 <label class="form-check-label">Widowed</label>
+			 
+			 </div>
+			 </div>
+			 </div>
+			 </div>
+			 
+			 <div class="row pt-3">
+			 <div class="col-lg-6">
+				 <div class="input-group">
+					 <span class="input-group-text" id="basic-addon1">Father's Name&nbsp; <i class="fa fa-user"></i></span>
+				  <input type="text" class="form-control" id="Father's Name" aria-label="Father's Name">
+	 </div>  
+			 </div>
+			   
+			 
+			 
+			 <div class="col-lg-6">
+				 <div class="input-group">
+					 <span class="input-group-text" id="basic-addon1">Mother's Maiden Name &nbsp;<i class="fa fa-user"></i></span>
+				  <input type="text" class="form-control" id="Mother's Maiden Name" aria-label="Mother's MaidenName">
+			 </div>
+	 
+			 </div>
+			 </div>
+					   <div class="row pt-3">
+			   <div class="col-lg-6">
+				 <div class="input-group">
+					 <span class="input-group-text" id="basic-addon1">Spouse Name &nbsp; <i class="fa fa-user"></i></span>
+				  <input type="text" class="form-control" id="Spouse Name" aria-label="Spouse Name">
+					 </div>
+	 
+			 </div>
+				 
+			   
+			   
+			   <div class="col-lg-6">
+				 <div class="input-group">
+					 <span class="input-group-text" >No. of Dependents</span>
+				  <input type="number" class="form-control" id="No. of Dependents" aria-label="No. of Dependents">
+				  </div>
+			   </div>
+			   </div>
+			 
+			 
+			   <div class="row pt-3">
+				 <div class="col-lg-6">
+					 <div class="input-group">
+						 <span class="input-group-text" id="basic-addon1">Upload Photo&nbsp; <i class="fa fa-upload"></i></span>
+					  <input type="file" class="form-control" id="Upload Photo" aria-label="Upload Photo">
+					  </div>
+			 
+			   </div>
+			 </div>
+			 
+			 
+			 
+			 </div> 
+			 <div class="row pt-3">
+			   <div class="col-lg-6">
+				 <button type="button" class="btn btn-success" onclick="nextSection()">Next</button>
+			   </div>
+			 </div>
+		   </div>
+	</div>
+	</div>
+			 </div>
+			 
+			 <div class="form-section" id="section2">
+				<div class="container">
+					<H>ADDRESS DETAILS</H>
+					<div class="row pt-3">
+					<div class="col-lg-12">
+						<div class="input-group">
+							<span class="input-group-text">Residence City&nbsp;</span>
+						 <input type="number" class="form-control" id="R-name1" aria-label="Residence City">
+			
+						</div>
+					</div>
+					<div class="row pt-3">
+					<div class="col-lg-2">
+							<label>Residence type</label>
+					</div>
+				
+					<div class="col-lg-8">
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="radio1">
+							<label class="form-check-label" for="radio1">Owned by self or spouse parent</label>
+							</div>
+							<div class="form-check form-check-inline">
+								
+								<input type="radio" class="form-check-input" name="optradio" id="radio1">
+								<label class="form-check-label" for="radio1">Sibling</label>
+								</div>
+		
+								<div class="form-check form-check-inline">
+									
+									<input type="radio" class="form-check-input" name="optradio" id="radio1">
+									<label class="form-check-label" for="radio1">Relative Owned</label>
+									</div>
+					</div>
+				</div>
+					<div class="row gy-2">
+					<div class="col-lg-2">
+						<label>Own House Proof</label>
+					</div>
+					<div class="col-lg-4">
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="radio1">
+							<label class="form-check-label" for="radio1">YES</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="radio1">
+							<label class="form-check-label" for="radio1">NO</label>
+						</div>
+						</div>
+						<div class="col-lg-6">
+							<label >Residential Status</label>
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="optradio" id="radio1">
+								<label class="form-check-label" for="radio1">Resident</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="optradio" id="radio1">
+								<label class="form-check-label" for="radio1">Non-resident</label>
+							</div>
+							</div>
+				</div>
+				<div class="row pt-3">
+				<div class="col-lg-12">
+					<div class="input-group">
+						<span class="input-group-text" id="basic-addon1">Monthly Rental Payable&nbsp; <i class="fa fa-rupe"></i></span>
+					 <input type="number" class="form-control" id="rent" aria-label="Monthly Rental Payable">
+		
+					</div></div>
+			</div>
+				<div class="row pt-3">
+					<div class="col-lg-4">
+					<label for="mon">No.of months & years in the house</label>
+					</div>
+					 <div class="col-lg-4">
+						<div class="input-group">
+							<span class="input-group-text" >Years&nbsp;</span>
+						 <input type="number" class="form-control" id="years" aria-label="Years">
+			
+						</div>
+		
+					</div>
+					<div class="col-lg-4">
+						<div class="input-group">
+							<span class="input-group-text" >Months&nbsp;</span>
+						 <input type="number" class="form-control" id="months" aria-label="Months">
+			
+						</div>
+					</div>
+			</div>
+		
+			<div class="col-lg-12">
+				<div class="input-group">
+					<span class="input-group-text" >Permanent Address Line&nbsp;</span>
+				 <input type="text" class="form-control" id="permanentaddressline" aria-label="Permanent Address Line">
+		
+				</div>
+			</div>
+		
+			<div class="row gy-2">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-text" >Landmark&nbsp;</span>
+					 <input type="text" class="form-control" id="landmark" aria-label="Landmark">
+		
+					</div></div>
+		
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-text" >State&nbsp;</span>
+					 <input type="text" class="form-control" id="state" aria-label="State">
+		
+					</div>		</div>
+			</div>
+		
+			<div class="row gy-2">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-text" >Village/Town/City&nbsp;</span>
+					 <input type="text" class="form-control" id="village" aria-label="Village/Town/City">
+		
+					</div>	</div>
+		
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-text" >Pincode&nbsp;</span>
+					 <input type="number" class="form-control" id="pincode" aria-label="Pincode">
+		
+					</div>	
+				</div>
+			</div>
+		<div class="row pt-3">
+			<div class="col-lg-12">
+				<div class="input-group">
+					<span class="input-group-text" >No(Appplicant) or AADHAR Enrollment Number&nbsp;</span>
+				 <input type="number" class="form-control" id="num1" aria-label="No(Appplicant) or AADHAR Enrollment Number">
+		
+				</div>
+			</div>
+		</div>
+			<div class="row gy-2">
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-text" >Voter Id&nbsp;</span>
+					 <input type="number" class="form-control" id="id" aria-label="Voter ID">
+		
+					</div>	
+			</div>
+		
+				<div class="col-lg-6">
+					<div class="input-group">
+						<span class="input-group-text" >Ration Card&nbsp;</span>
+					 <input type="number" class="form-control" id="card" aria-label="Ration Card">
+		
+					</div>	
+		</div>
+			</div>
+		
+			<div class="row pt-3">
+				<div class="col-lg-6">
+				  <button type="button" class="btn btn-success" onclick="prevSection()">Previous</button>
+				</div>
+				<div class="col-lg-6 text-end">
+				  <button type="button" class="btn btn-success" onclick="nextSection()">Next</button>
+				</div>
+			  </div>
+		</div>
+				</div>
+				</div>
+	
+      <div class="form-section" id="section3">
+		<h2>LOAN DETAILS</h2>
+          
+		<div class="form-group">    
+			<div class="col-lg-12">
+				<div class="container">
+		
+			
+			  <div class="row pt-3">
+	
+				
+				<label>Processing Fee</label>
+				<input type="number" class="form-control" name="Processing Fee">
+	   </div>
+	
+	<div class="row">
+	  
+		<label>Doc Charge</label>
+		<input type="number"  class="form-control" name="Doc Charge" id="Doc Charge">
+	
+	</div>
+	
+		<div class="row pt-3 ">
+		
+		  <label >Loan Applied Amount</label>
+		  <input type="number" class="form-control" id="Loan Applied Amount">
+	
+		 </div>
+		 
+		 <div class="row pt-3">   
+			<label>Eligible Loan Amount</label>
+			<input type="number" class="form-control">
+			 
+		 </div>
+	<div class="row pt-3">
+		<div class="col-lg-4">
+			<label>Loan Amount Applied Loan Tenure</label>
+		</div>
+		<div class="col-lg-4">
+			<label>Weeks</label>
+			<input type="number" class="form-control" id="Weeks">
+		</div>
+		<div class="col-lg-4">
+			<lablel>EMI</lablel>
+			<input type="number" class="form-control" id="EMI">
+		</div>
+		</div>
+	
+	  <div class="row pt-3">
+		<label>EMI</label>
+		<input type="number" class="form-control" id="EMI">
+	  
+	</div>
+	
+		<div class="row pt-3">
+		<div class="col-lg-6">
+		  <label >No. of Advance EMI</label>
+		  <input type="number" class="form-control" id="No. of Advance EMI">
+		
+	</div>
+	<div class="col-lg-6">
+		<label>Comfortable EMI</label>
+		<input type="number" class="form-control" id="comfortable EMI">
+	</div>
+	</div>
+	
+	
+	
+		
+	
+	<div class="row pt-3">
+		<div class="col-lg-2">
+		<label>Usage</label>
+	  </div>
+	  <div class="col-lg-10">
+	<div class="form-check form-check-inline">
+	<input  type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" >
+	<label class="form-check-label" for="radio1">Personal</label>
+	</div>
+	<div class="form-check form-check-inline ">
+	<input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+	<label class="form-check-label" for="radio2">Business</label>
+	</div>
+	<div class="form-check form-check-inline">
+	<input  type="radio" class="form-check-input" id="radio3" name="optradio" >
+	<label class="form-check-label">Agricultre</label>
+	</div>
+	</div>
+	</div>
+	
+	</div>
+	</div>
+	</div>
+        <div class="row pt-3">
+          <div class="col-lg-6">
+            <button type="button" class="btn btn-success" onclick="prevSection()">Previous</button>
+          </div>
+          <div class="col-lg-6 text-end">
+            <button type="button" class="btn btn-success" onclick="nextSection()">Next</button>
+          </div>
+        </div>
+      </div>
+
+         <div class="form-section" id="section4">
+		<div class="form-group">
+			<div class="container">
+				<h5 class="pt-3">Loan Details</h5>
+				<div class="row pt-3">
+					<div class="col-lg-3">
+						<label>Are you differently-abled</label>
+					</div>
+					<div class="col-lg-4">
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="radio1">
+							<label class="form-check-label" for="radio1">YES</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="radio1">
+							<label class="form-check-label" for="radio1">NO</label>
+						</div>
+						</div>
+					</div>
+	
+					<div class="row pt-3">
+						<div class="col-lg-2">
+							<label>Religion</label>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="optradio" id="radio1">
+								<label class="form-check-label" for="radio1">Hindu</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="optradio" id="radio1">
+								<label class="form-check-label" for="radio1">Muslim</label>
+							</div>
+							<div class="form-check form-check-inline">
+								<input type="radio" class="form-check-input" name="optradio" id="radio1">
+								<label class="form-check-label" for="radio1">Christian</label>
+							</div>
+						</div>
+							</div>
+				
+					<div class="row pt-3">
+							<div class="col-lg-8">
+								<label >Caste Category</label>
+								<div class="form-check form-check-inline">
+									<input type="radio" class="form-check-input" name="optradio" id="radio1">
+									<label class="form-check-label" for="radio1">SC</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input type="radio" class="form-check-input" name="optradio" id="radio1">
+									<label class="form-check-label" for="radio1">ST</label>
+								</div>
+	
+								<div class="form-check form-check-inline">
+									<input type="radio" class="form-check-input" name="optradio" id="radio1">
+									<label class="form-check-label" for="radio1">OBC</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input type="radio" class="form-check-input" name="optradio" id="radio1">
+									<label class="form-check-label" for="radio1">General</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input type="radio" class="form-check-input" name="optradio" id="radio1">
+									<label class="form-check-label" for="radio1">Others</label>
+								</div>
+								
+								</div>
+						</div>
+					</div>
+						<div class="row pt-2 pb-2">
+					<div class="col-lg-12">
+						<div class="input-group">
+							<span class="input-group-text" >Number of years in this place&nbsp;</span>
+						 <input type="count-number" class="form-control" id="cn" aria-label="Number of years in this place">
+			
+						</div>	
+			
+					</div>
+				</div>
+				<div class="row pt-2 pb-2">
+					<div class="col-lg-2">
+						<label>Educational Qualification</label>
+					</div>
+					<div class="col-lg-8">
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="Illiterate">
+							<label class="form-check-label" for="radio1">Illiterate</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="Matriculate">
+							<label class="form-check-label" for="radio1">Matriculate</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="Graduate">
+							<label class="form-check-label" for="radio1">Graduate</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="Post-Graduate">
+							<label class="form-check-label" for="radio1">Post-Graduate</label>
+						</div>
+						<div class="form-check form-check-inline">
+							<input type="radio" class="form-check-input" name="optradio" id="Others">
+							<label class="form-check-label" for="radio1">Others</label>
+						</div>
+						</div>
+	</div>
+	<div class="row pt-2 pb-2">
+		<div class="col-lg-6">
+			<div class="input-group">
+				<span class="input-group-text" >Branch Name&nbsp;</span>
+			 <input type="text" class="form-control" id="Branch" aria-label="Branch Name">
+
+			</div>	
+
+	
+		</div>
+	
+		<div class="col-lg-6">
+			<div class="input-group">
+				<span class="input-group-text" id="basic-addon1">Applicant's Name &nbsp; <i class="fa fa-user"></i></span>
+			 <input type="text" class="form-control" id="Applicant's Name" aria-label="Applicant's Name">
+				</div>
+
+		</div>
+	</div>
+	
+	<div class="row pt-2 pb-2">
+		<div class="col-lg-12">
+			<div class="input-group">
+				<span class="input-group-text" id="basic-addon1">Name of RO&nbsp; <i class="fa fa-user"></i></span>
+			 <input type="text" class="form-control" id="Name of RO" aria-label="Name of RO">
+				</div>
+
+		</div>
+		<div class="row pt-2 pb-2">
+
+		<div class="col-lg-12">
+			<label for="date">Date</label>
+			<input type="date" id="date" name="date" >
+		</div>
+	</div>
+	<div class="row pt-4 pb-2">
+		<div class="col-lg-12">
+	<p>I hereby confirm that the prescribed KYC process has been adhered to and recommended this applicant for credit assessment for 
+		SHG / JLG/ IL. I declare that have personally met the applicant and that he/she has filled the application form as enclosed and 
+		provided the necessary documents. I declare that I have verified the photocopies. if any, against the original documents</p>
+	</div>
+	</div>
+	
+	<div class="row pt-2 pb-2">
+		<div class="col-lg-12">
+			<label>Signature of RO</label>
+		   <input type="text" class="form-control" name="Name-sign" id="sign">
+		</div>
+		</div>
+		<div class="row pt-2 pb-2">
+			<div class="col-lg-12">
+				<label for="date">Date</label>
+				<input type="date" id="date" name="date" >
+			</div>
+		</div>
+		
+        <div class="row pt-3">
+          <div class="col-lg-6">
+            <button type="button" class="btn btn-success" onclick="prevSection()">Previous</button>
+          </div>
+          <div class="col-lg-6 text-end">
+            <button type="button" class="btn btn-success" onclick="nextSection()">Next</button>
+          </div>
+        </div>
+      </div>
+		</div>
+		 </div>
+
+      <div class="form-section" id="section5">
+		<div class="form-group">    
+			<div class="col-lg-12">
+		  
+		
+	  <div class="container">
+		<div class="row pt-3">
+		  <div class="col-lg-9">
+		  <p class="text">I_____________________agrees to and promises to pay to <b>SUNRISE WOMEN DEVELOPMENT</b> <span class="line2"><b>FOUNDATION</b>the sum of ______________________offer INR value received, with interest </span> <span class="line3">at the annual rate of interest-__________________________ payable after Dated.If this note is in default</span> and is placed for Collection________________________ costs of Collection and attorney's fees.
+		  <br>Shall pay all reasonable.
+	  </p>
+		</div>
+		</div>
+		<div class="row pt-3 ">
+			<div class="col-lg-6">
+		
+		  <label >Upload Photo</label>
+		  <input type="file" class="form-control" name="Upload Photo">
+		 </div>
+		 </div>
+		
+		 
+		
+		 <div class="row pt-3">
+		<div class="col-lg-6">
+		
+			<label>Signature of the borrower</label>
+			<input type="text" class="form-control" name="Signature off the borrower">
+		</div>
+		
+	  
+	  <div class="col-lg-6">
+		
+		  <label for="date">Date</label>
+		  <input type="number" class="form-control" id="date" name="Date">
+		
+	  </div>
+	  </div>
+	  
+	  
+		
+	  
+	  <div class="row pt-3">
+	  <div class="col-lg-6">
+	  <label>Co Borrower/Guarantor Signature</label>
+	  <input type="text"  class="form-control" name="Co Borrower/Guarantor Signature" id="Co Borrower/Guarantor Signature" >
+	  </div>
+	  
+	  <div class="col-lg-6">
+	  <label>Date</label>
+	  <input type="number"  class="form-control" name="Date" id="Date" >
+	  </div>
+	  </div>
+	  
+	  <div class="row pt-3">
+	  
+		<label>Witness 1</label>
+		<input type="text"  class="form-control" name="Witness 1" id="Witness 1" >
+		</div>
+			<div class="row pt-3">
+	  
+	  <label>Witness 2</label>
+	  <input type="text"  class="form-control" name="Witness 2" id="Witness 2" >
+			</div>
+
+	  
+	  </div>
+	  </div>
+	  </div>
+        <div class="row pt-3">
+          <div class="col-lg-6">
+            <button type="button" class="btn btn-success" onclick="prevSection()">Previous</button>
+          </div>
+          <div class="col-lg-6 text-end">
+            <button type="button" class="btn btn-success" onclick="nextSection()">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section" id="section6">
+		<div class="form-group">
+			<div class="container">
+				<h6 class="pt-4 pb-2">DECLARATION IF APPLICANT (S)/CO-APPLICANT SIGN (S) IN VERNACULAR LANGUAGE</h6>
+				<p>1. The terms and conditions mentioned above have been explained to me in ________________________________________
+					language, by Mr./Ms___________________________________________and I declare that have understood and 
+					consented to all the terms and conditions and also to the declarations and undertakings and I agree to abide by the same. 
+					<br>2. Shall mean any Joint Liability Group of which the Obligors are members. 
+					<br>3. Includes the interest in relation to the SHG/JLG/ IL Loan at the Rate of Interest as specified in the Loan Documents 
+					means the credit facility (ies) availed/to be availed by the Borrower/s from the Lender from time to time under the 
+					Joint Liability Group (JLG) Loan Process 
+					<br>4. hereby declare that I have voluntarily submitted my Aadhaar card/e-Aadhaar to ISHWARYAM OVERSEAS INVESTORS & 
+					I request and authorize to use the same as my Identity and/or Address proof. 
+					<br> 5. Declaration on name/ DOB (if any) there is mismatch my name / DOB in the KYC Documents. 
+					<br>6. declare that my name / DOB mentioned in the following document is correct and request SUNRISE WOMEN 
+					DEVELOPMENT FOUNDATION to consider the same for loan documents 
+					<br>7. Means the tenure of the JLG Loan for such period as specified in the Loan Documents unless recalled / 
+					canceled / terminated by the Lender</p>
+			</div>
+		</div>
+	  
+        <div class="row pt-3">
+          <div class="col-lg-6">
+            <button type="button" class="btn btn-success" onclick="prevSection()">Previous</button>
+          </div>
+          <div class="col-lg-6 text-end">
+            <button type="button" class="btn btn-success" onclick="nextSection()">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section" id="section7">
+        <div class="form-group">    
+			<div class="col-lg-12">
+		   <div class="container">
+			<p>Declaration if applicant(s)/ Co-Applicant sign(s) in vernacular language</p>
+		<div class="row pt-3">
+			
+		   
+		  <label >Name of the Declarant</label>
+		  <input type="name" class="form-control" name="Name of the Declarant">
+		 </div>
+		 
+		 
+		 
+		
+		 <div class="row pt-3">
+		
+		
+			<label>Signature of the Declarant</label>
+			<input type="text" class="form-control" name="Signature of the Declarant">
+		</div>
+		
+		
+		 <div class="row pt-3 ">
+		  
+		<p>Group Guarantee Signatures</p>
+	</div>
+		<div class="row">
+	  <div class="col-lg-6">
+		
+		  <label >1.</label>
+		  <input type="text" class="form-control"  name="name">
+		
+	  </div>
+	  <div class="col-lg-6">
+	  <label>3.</label>
+	  <input type="text"  class="form-control" name="2." id="2." >
+	  </div>
+	</div>
+	
+	
+		<div class="row pt-3">
+	  <div class="col-lg-6">
+	  <label>2.</label>
+	  <input type="text"  class="form-control" name="2." id="2." >
+	  </div>
+	  
+	  <div class="col-lg-6">
+			<label>4.</label>
+		<input type="text"  class="form-control" name="4." id="4." >
+		</div>
+		</div>
+	
+	  
+	<div class="row pt-3">
+	  <div class="col-lg-6">
+	  <label>Center Leader Signature</label>
+	  <input type="text"  class="form-control" name="Center Leader Signature" id="Center Leader Signature" >
+	  </div>
+	  <div class="col-lg-6">
+		<label>Date</label>
+		<input type="text"  class="form-control" name="Date" id="Date" >
+		</div>
+		</div>
+		   <div class="row pt-3">
+			<div class="col-lg-6">
+			<label>Loan Approver Signature</label>
+			<input type="text"  class="form-control" name="Loan Approver Signature" id="Loan Approver Signature" >
+			</div>
+			<div class="col-lg-6">
+			  <label>Date</label>
+			  <input type="text"  class="form-control" name="Date" id="Date" >
+			  </div>
+			</div>
+   
+	  </div>
+	  </div>
+	  </div>
+        <div class="row pt-4">
+          <div class="col-lg-6">
+            <button type="button" class="btn btn-success" onclick="prevSection()">Previous</button>
+          </div>
+          <div class="col-lg-6 text-end">
+            <button type="submit" class="btn btn-success">Save and Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+</div>
+  </div>
+
+  <script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('.form-section');
+
+    function showSection(index) {
+      sections.forEach((section, i) => {
+        section.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSection() {
+      if (currentSection < sections.length - 1) {
+        currentSection++;
+        showSection(currentSection);
+      }
+    }
+
+    function prevSection() {
+      if (currentSection > 0) {
+        currentSection--;
+        showSection(currentSection);
+      }
+    }
+  </script>
+</body>
+</html>
